@@ -81,9 +81,9 @@ typedef void (^NetworkUnreachable)(Reachability * reachability);
 -(BOOL)startNotifier;
 -(void)stopNotifier;
 
--(BOOL)isReachable;
--(BOOL)isReachableViaWWAN;
--(BOOL)isReachableViaWiFi;
+@property (nonatomic, assign, readonly) BOOL isReachable;
+@property (nonatomic, assign, readonly) BOOL isReachableViaWWAN;
+@property (nonatomic, assign, readonly) BOOL isReachableViaWiFi;
 
 // WWAN may be available, but not active until a connection has been established.
 // WiFi may require a connection for VPN on Demand.
